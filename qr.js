@@ -12,21 +12,15 @@ const router = express.Router();
 const MAX_RECONNECT_ATTEMPTS = 3;
 const SESSION_TIMEOUT = 60000;
 
-const MESSAGE = `
-*SESSION GENERATED SUCCESSFULLY* ✅
+const MESSAGE = `*VISPER-MD Session Connected 🫟*
 
-*Gɪᴠᴇ ᴀ ꜱᴛᴀʀ ᴛᴏ ʀᴇᴘᴏ ꜰᴏʀ ᴄᴏᴜʀᴀɢᴇ* 🌟
-https://github.com/GlobalTechInfo/MEGA-MD
+*Now you can using this session id for deploy your bot⚡*
 
-*Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ꜰᴏʀ ϙᴜᴇʀʏ* 💭
-https://t.me/Global_TechInfo
-https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07
+*◻ Github :* https://github.com/vispermdoffical/VISPER-MD
 
-*Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ* 🪄 
-https://youtube.com/@GlobalTechInfo
+*◻ Chanal link :* https://whatsapp.com/channel/0029Vb1Db0LCsU9SUsOXuC3c
 
-*MEGA-MD--WHATSAPP* 🥀
-`;
+*◻ Offical web :* https://visper-md-offical.vercel.app/`;
 
 async function removeFile(FilePath) {
     try {
