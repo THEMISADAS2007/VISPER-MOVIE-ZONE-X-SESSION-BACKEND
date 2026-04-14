@@ -12,15 +12,13 @@ const router = express.Router();
 const MAX_RECONNECT_ATTEMPTS = 3;
 const SESSION_TIMEOUT = 60000;
 
-const MESSAGE = `*VISPER-MD Session Connected 🫟*
+const MESSAGE = `*Do not share this code anyone  ❗*
 
-*Now you can using this session id for deploy your bot⚡*
+*🟢 Just use this session id to deploy the bot.*
 
-*◻ Github :* https://github.com/vispermdoffical/VISPER-MD
+*📢 Offical Chanal :*  *https://whatsapp.com/channel/0029VagN2qW3gvWUBhsjcn3I*
 
-*◻ Chanal link :* https://whatsapp.com/channel/0029Vb1Db0LCsU9SUsOXuC3c
-
-*◻ Offical web :* https://visper-md-offical.vercel.app/`;
+> VISPER MOVIE ZONE X`;
 
 async function removeFile(FilePath) {
     try {
@@ -179,13 +177,14 @@ router.get('/', async (req, res) => {
                             const megaLink = await megaUpload(await fs.readFile(credsFile), `${id}.json`);
                             const megaSessionId = megaLink.replace('https://mega.nz/file/', '');
                             console.log('✅ Session uploaded to MEGA, ID:', megaSessionId);
+                            const sessionid = `VISPER-MOVIE-ZONE-X${megaSessionId}`
 
                             const userJid = Object.keys(sock.authState.creds.me || {}).length > 0
                                 ? jidNormalizedUser(sock.authState.creds.me.id)
                                 : null;
 
                             if (userJid) {
-                                const msg = await sock.sendMessage(userJid, { text: megaSessionId });
+                                const msg = await sock.sendMessage(userJid, { text: sessionid });
                                 await sock.sendMessage(userJid, { text: MESSAGE, quoted: msg });
                             }
 
